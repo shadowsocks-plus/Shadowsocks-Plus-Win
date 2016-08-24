@@ -20,7 +20,7 @@
         <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="32,232,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <CheckBox x:Name="checkBox" Content="Auto start with system" HorizontalAlignment="Left" Margin="70,194,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="CheckBox_Unchecked"/>
         <Button x:Name="button1" Content="Run" HorizontalAlignment="Left" Margin="231,232,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" RenderTransformOrigin="0.493,0.3"/>
-        <StatusBar HorizontalAlignment="Left" Height="25" Margin="0,261,0,0" VerticalAlignment="Top" Width="352">
+        <StatusBar HorizontalAlignment="Left" Height="25" Margin="0,262,0,0" VerticalAlignment="Top" Width="352">
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ready" VerticalAlignment="Top" Height="18" Width="323"/>
         </StatusBar>
     </Grid>
