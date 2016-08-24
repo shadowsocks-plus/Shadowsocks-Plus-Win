@@ -1,0 +1,24 @@
+﻿<Window x:Class="Shadowsocks_Plus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shadowsocks_Plus"
+        mc:Ignorable="d"
+        Title="Shadowsocks-Plus" Height="320" Width="360"
+        WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0.5,0.491">
+        <Label x:Name="label" Content="Server IP: " HorizontalAlignment="Left" Margin="70,34,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Server port: " HorizontalAlignment="Left" Margin="70,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Password: " HorizontalAlignment="Left" Margin="70,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-0.756"/>
+        <Label x:Name="label3" Content="Local port: " HorizontalAlignment="Left" Margin="70,148,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="143,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="143,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox1_TextChanged"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="143,111,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.352" Height="23"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="144,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="1080" TextChanged="textBox2_TextChanged"/>
+        <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="32,232,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <CheckBox x:Name="checkBox" Content="Auto start with system" HorizontalAlignment="Left" Margin="70,194,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Run" HorizontalAlignment="Left" Margin="231,232,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" RenderTransformOrigin="0.493,0.3"/>
+        <StatusBar HorizontalAlignment="Left" Height="22" Margin="0,267,0,0" VerticalAlignment="Top" Width="352"/>
+    </Grid>
+</Window>
