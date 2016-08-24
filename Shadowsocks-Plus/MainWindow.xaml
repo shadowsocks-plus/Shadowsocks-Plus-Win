@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Shadowsocks_Plus"
         mc:Ignorable="d"
         Title="Shadowsocks-Plus" Height="320" Width="360"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
     <Grid RenderTransformOrigin="0.5,0.491">
         <Label x:Name="label" Content="Server IP: " HorizontalAlignment="Left" Margin="70,34,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Server port: " HorizontalAlignment="Left" Margin="70,72,0,0" VerticalAlignment="Top"/>

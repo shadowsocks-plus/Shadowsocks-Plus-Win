@@ -56,8 +56,12 @@ namespace Shadowsocks_Plus
                 return;
             }
             string msg = String.Format("Server IP: {0}\nServer port: {1}\nPassword: {2}\nLocal port: {3}", server, sport, password, lport);
-            MessageBox.Show(msg, "Proceed?", MessageBoxButton.YesNo, MessageBoxImage.Question);
             // need to handle `no`
+            MessageBoxResult response = MessageBox.Show(msg, "Proceed?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(response == MessageBoxResult.No)
+            {
+                return;
+            }
             if (!(System.IO.File.Exists("ssp.exe")))
             {
                 textBlock.Text = "Be patient while I'm downloading necessary files...";
