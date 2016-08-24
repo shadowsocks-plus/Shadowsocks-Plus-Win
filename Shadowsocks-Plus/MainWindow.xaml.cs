@@ -3,6 +3,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Net;
 using Microsoft.Win32;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,8 +31,6 @@ namespace Shadowsocks_Plus
             if (System.IO.File.Exists(@".\config.txt"))
             {
                 string[] lines = System.IO.File.ReadLines(".\\config.txt").ToArray();
-                //MessageBox.Show("test");
-                //MessageBox.Show(lines[0]);
                 textBox.Text = lines[0];
                 textBox1.Text = lines[1];
                 passwordBox.Password = lines[2];
@@ -44,47 +43,57 @@ namespace Shadowsocks_Plus
             this.Close();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        // download method
+        public async Task DownloadFileAsync()
         {
+            using (var client = new WebClient())
+            {
+                await client.DownloadFileTaskAsync(
+                    new Uri("https://github.com/jm33-m0/shadowsocks-plus/releases/download/v0.0/ssp.exe"),
+                    "ssp.exe"
+                    );
+            }
+        }
+
+        private async void button1_Click(object sender, RoutedEventArgs e)
+        {
+
             // need to check if the proxy is already running
             Process[] pname = Process.GetProcessesByName("ssp");
-            if(pname.Length != 0)
+            if (pname.Length != 0)
             {
                 MessageBox.Show("Local proxy is already running!", "Warning: ", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
-                //Application.Current.Shutdown();
             }
-           
+
             string server = textBox.Text;
-            //int sport = Int32.Parse(textBox1.Text);
             string sport = textBox1.Text;
             string password = passwordBox.Password;
-            //int lport = Int32.Parse(textBox2.Text);
             string lport = textBox2.Text;
+
             // write into file
             string[] config = { server, sport, password, lport };
             System.IO.File.WriteAllLines(@".\config.txt", config);
-            if(String.IsNullOrWhiteSpace(server) || String.IsNullOrWhiteSpace(password) || String.IsNullOrWhiteSpace(sport) || String.IsNullOrWhiteSpace(lport))
+            if (String.IsNullOrWhiteSpace(server) || String.IsNullOrWhiteSpace(password) || String.IsNullOrWhiteSpace(sport) || String.IsNullOrWhiteSpace(lport))
             {
                 MessageBox.Show("Fill in all the forms before proceeding!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             string msg = String.Format("Server IP: {0}\nServer port: {1}\nPassword: {2}\nLocal port: {3}", server, sport, password, lport);
+
             // need to handle `no`
             MessageBoxResult response = MessageBox.Show(msg, "Proceed?", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(response == MessageBoxResult.No)
+            if (response == MessageBoxResult.No)
             {
                 return;
             }
             if (!(System.IO.File.Exists("ssp.exe")))
             {
                 textBlock.Text = "Be patient while I'm downloading necessary files...";
-                Thread t = new Thread(() => {
-                    WebClient wc = new WebClient();
-                    wc.DownloadFile("https://github.com/jm33-m0/shadowsocks-plus/releases/download/v0.1/ssp.exe", @".\ssp.exe");
-                });
-                t.Start();
+                await DownloadFileAsync();
+                //textBlock.Text = "Done downloading";
             }
+
             // Now start ssp proxy in background
             textBlock.Text = String.Format("Starting local proxy at 127.0.0.1:{0}...", lport);
             string args = String.Format("-s {0} -p {1} -k {2} -l {3}", server, sport, password, lport);
@@ -97,7 +106,7 @@ namespace Shadowsocks_Plus
             };
             Process process = Process.Start(psi);
             Process[] is_running = Process.GetProcessesByName("ssp");
-            if(is_running.Length != 0)
+            if (is_running.Length != 0)
             {
                 textBlock.Text = String.Format("Local proxy started at 127.0.0.1:{0}", lport);
                 MessageBox.Show("Local proxy started, feel free to click `Exit`", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
