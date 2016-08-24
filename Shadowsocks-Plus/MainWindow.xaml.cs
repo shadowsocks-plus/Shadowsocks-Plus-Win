@@ -27,6 +27,16 @@ namespace Shadowsocks_Plus
         public MainWindow()
         {
             InitializeComponent();
+            if (System.IO.File.Exists(@".\config.txt"))
+            {
+                string[] lines = System.IO.File.ReadLines(".\\config.txt").ToArray();
+                //MessageBox.Show("test");
+                //MessageBox.Show(lines[0]);
+                textBox.Text = lines[0];
+                textBox1.Text = lines[1];
+                passwordBox.Password = lines[2];
+                textBox2.Text = lines[3];
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -44,12 +54,16 @@ namespace Shadowsocks_Plus
                 return;
                 //Application.Current.Shutdown();
             }
+           
             string server = textBox.Text;
             //int sport = Int32.Parse(textBox1.Text);
             string sport = textBox1.Text;
             string password = passwordBox.Password;
             //int lport = Int32.Parse(textBox2.Text);
             string lport = textBox2.Text;
+            // write into file
+            string[] config = { server, sport, password, lport };
+            System.IO.File.WriteAllLines(@".\config.txt", config);
             if(String.IsNullOrWhiteSpace(server) || String.IsNullOrWhiteSpace(password) || String.IsNullOrWhiteSpace(sport) || String.IsNullOrWhiteSpace(lport))
             {
                 MessageBox.Show("Fill in all the forms before proceeding!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
