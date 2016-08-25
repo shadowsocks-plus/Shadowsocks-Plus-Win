@@ -18,10 +18,11 @@
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="143,111,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.352" Height="23"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="144,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="1088" TextChanged="textBox2_TextChanged"/>
         <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="32,232,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <CheckBox x:Name="checkBox" Content="Auto start with system" HorizontalAlignment="Left" Margin="70,194,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="CheckBox_Unchecked"/>
+        <CheckBox x:Name="checkBox" Content="Launch proxy at startup" HorizontalAlignment="Left" Margin="70,194,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="CheckBox_Unchecked"/>
         <Button x:Name="button1" Content="Run" HorizontalAlignment="Left" Margin="231,232,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" RenderTransformOrigin="0.493,0.3"/>
         <StatusBar HorizontalAlignment="Left" Height="25" Margin="0,262,0,0" VerticalAlignment="Top" Width="352">
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ready" VerticalAlignment="Top" Height="18" Width="323"/>
         </StatusBar>
+        <Button x:Name="button2" Content="Stop" HorizontalAlignment="Left" Margin="133,232,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
     </Grid>
 </Window>
