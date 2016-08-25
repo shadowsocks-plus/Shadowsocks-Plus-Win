@@ -44,7 +44,17 @@ namespace Shadowsocks_Plus
                     //key.DeleteValue("SSPlus-Proxy");
                     //string reg = Registry.GetValue(keyName, "SSPlus-Proxy", "").ToString();
                     //textBlock.Text = reg;
-                    checkBox.IsChecked = true;
+                    string[] values = key.GetValueNames();
+                    if (values.Contains("SSPlus-Proxy"))
+                    {
+                        //textBlock.Text = "enabled";
+                        checkBox.IsChecked = true;
+                    }
+                    else
+                    {
+                        //textBlock.Text = "disabled";
+                        checkBox.IsChecked = false;
+                    }
                 }
                 else
                 {
@@ -77,7 +87,7 @@ namespace Shadowsocks_Plus
             using (var client = new WebClient())
             {
                 await client.DownloadFileTaskAsync(
-                    new Uri("https://github.com/jm33-m0/shadowsocks-plus/releases/download/v0.0/ssp.exe"),
+                    new Uri("https://raw.githubusercontent.com/shadowsocks-plus/Shadowsocks-Plus-Win/master/ssp.exe"),
                     "ssp.exe"
                     );
             }
@@ -178,7 +188,7 @@ namespace Shadowsocks_Plus
             if (is_running.Length != 0)
             {
                 textBlock.Text = String.Format("Local proxy started at 127.0.0.1:{0}", lport);
-                MessageBox.Show("Local proxy started, feel free to click `Exit`", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Local proxy started, feel free to click `Exit`\nRemember to configure your browser to use the proxy shown below", "Success!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
