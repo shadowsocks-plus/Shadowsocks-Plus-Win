@@ -87,7 +87,7 @@ namespace Shadowsocks_Plus
             using (var client = new WebClient())
             {
                 await client.DownloadFileTaskAsync(
-                    new Uri("https://raw.githubusercontent.com/shadowsocks-plus/Shadowsocks-Plus-Win/master/ssp.exe"),
+                    new Uri("https://github.com/shadowsocks-plus/Shadowsocks-Plus-Win/raw/master/Shadowsocks-Plus/ssp.exe"),
                     "ssp.exe"
                     );
             }
@@ -244,6 +244,11 @@ namespace Shadowsocks_Plus
             {
                 MessageBox.Show("Not running!", "Hey", MessageBoxButton.OK, MessageBoxImage.Hand);
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://jm33.me");
         }
     }
 }

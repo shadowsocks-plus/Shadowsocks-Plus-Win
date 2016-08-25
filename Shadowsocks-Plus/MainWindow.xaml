@@ -9,6 +9,25 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid RenderTransformOrigin="0.5,0.491">
+        <Button Margin="10,5,198,259" Content="Visit my blog for support" Cursor="Hand" Click="Button_Click_1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <TextBlock TextDecorations="Underline">
+                <ContentPresenter />
+                    </TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Foreground" Value="Blue" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <Label x:Name="label" Content="Server IP: " HorizontalAlignment="Left" Margin="70,34,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Server port: " HorizontalAlignment="Left" Margin="70,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Password: " HorizontalAlignment="Left" Margin="70,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-0.756"/>
