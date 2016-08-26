@@ -15,8 +15,10 @@ An installer for SSPlus local proxy on Windows
 
 ## TO-DO
 - [x] Save config details into a config file and load config info from it
-- [ ] Hide into system tray
+- [ ] <s>Hide into system tray</s>
 - [ ] Enable system proxy with [Privoxy](https://www.privoxy.org/)
+- [ ] Convert SOCKS5 to VPN?
 
-## Acknowledgement
+## Acknowledgement & License
 - This app uses a compiled [Shadowsocks-Plus](https://github.com/shadowsocks-plus/shadowsocks-plus) client, which is developed by [losfair](https://github.com/losfair)
+- Published under GPLv3
