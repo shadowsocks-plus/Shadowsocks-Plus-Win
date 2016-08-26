@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <Grid RenderTransformOrigin="0.5,0.491">
-        <Button Margin="10,5,198,259" Content="Visit my blog for support" Cursor="Hand" Click="Button_Click_1">
+        <Button Margin="23,7,172,257" Content=" Visit my blog for support " Cursor="Hand" Click="Button_Click_1">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <TextBlock TextDecorations="Underline">
@@ -43,5 +43,24 @@
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ready" VerticalAlignment="Top" Height="18" Width="323"/>
         </StatusBar>
         <Button x:Name="button2" Content="Stop" HorizontalAlignment="Left" Margin="133,232,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+        <Button x:Name="help" Margin="213,7,41,257" Content=" How to use? " Cursor="Hand" Click="Button_Click_2">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <TextBlock TextDecorations="Underline"><InlineUIContainer>
+                            <ContentPresenter />
+                        </InlineUIContainer></TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Foreground" Value="Blue" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Window>

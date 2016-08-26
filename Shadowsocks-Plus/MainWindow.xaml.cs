@@ -41,18 +41,13 @@ namespace Shadowsocks_Plus
             {
                 if (key != null)
                 {
-                    //key.DeleteValue("SSPlus-Proxy");
-                    //string reg = Registry.GetValue(keyName, "SSPlus-Proxy", "").ToString();
-                    //textBlock.Text = reg;
                     string[] values = key.GetValueNames();
                     if (values.Contains("SSPlus-Proxy"))
                     {
-                        //textBlock.Text = "enabled";
                         checkBox.IsChecked = true;
                     }
                     else
                     {
-                        //textBlock.Text = "disabled";
                         checkBox.IsChecked = false;
                     }
                 }
@@ -61,19 +56,6 @@ namespace Shadowsocks_Plus
                     MessageBox.Show("No key found!", "Not found", MessageBoxButton.OK, MessageBoxImage.None);
                 }
             }
-        }
-
-        public void availability()
-        {
-            HttpWebRequest request;
-            HttpWebResponse response;
-
-            request = (HttpWebRequest)WebRequest.Create("http://www.google.com");
-            request.Proxy = new WebProxy("127.0.0.1:1080");
-
-            response = (HttpWebResponse)request.GetResponse();
-            MessageBox.Show(response.ToString());
-            response.Close();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -121,7 +103,6 @@ namespace Shadowsocks_Plus
 
         public void read_input()
         {
-            //IPAddress ip;
             string server = IPAddress.Parse(textBox.Text).ToString();
             textBox.Text = server;
             string sport = textBox1.Text;
@@ -169,7 +150,6 @@ namespace Shadowsocks_Plus
             {
                 textBlock.Text = "Be patient while I'm downloading necessary files...";
                 await DownloadFileAsync();
-                //textBlock.Text = "Done downloading";
             }
 
             // Now start ssp proxy in background
@@ -220,7 +200,6 @@ namespace Shadowsocks_Plus
                 {
                     key.DeleteValue("SSPlus-Proxy");
                     textBlock.Text = "Auto start disabled";
-                    //MessageBox.Show("Auto start disabled", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -231,7 +210,6 @@ namespace Shadowsocks_Plus
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            //availability();
             try
             {
                 Process[] ssp = Process.GetProcessesByName("ssp");
@@ -249,6 +227,18 @@ namespace Shadowsocks_Plus
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://jm33.me");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (!(System.IO.File.Exists("readme.html")))
+            {
+                System.Diagnostics.Process.Start("https://jm33.me/shadowsocks-plus-win.html");
+            }
+            else
+            {
+                System.Diagnostics.Process.Start("readme.html");
+            }
         }
     }
 }
