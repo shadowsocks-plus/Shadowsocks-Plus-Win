@@ -233,7 +233,7 @@ namespace Shadowsocks_Plus
         {
             if (!(System.IO.File.Exists("readme.html")))
             {
-                System.Diagnostics.Process.Start("https://jm33.me/shadowsocks-plus-win.html");
+                System.Diagnostics.Process.Start("https://github.com/shadowsocks-plus/Shadowsocks-Plus-Win/blob/master/how-to.md");
             }
             else
             {
