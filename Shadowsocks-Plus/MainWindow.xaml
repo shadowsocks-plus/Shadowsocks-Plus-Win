@@ -32,9 +32,9 @@
         <Label x:Name="label1" Content="Server port: " HorizontalAlignment="Left" Margin="70,72,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Password: " HorizontalAlignment="Left" Margin="70,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.018,-0.756"/>
         <Label x:Name="label3" Content="Local port: " HorizontalAlignment="Left" Margin="70,148,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="143,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="143,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox1_TextChanged"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="143,111,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.352" Height="23"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="143,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged" Text="127.0.0.1"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="143,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox1_TextChanged" Text="8388"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="143,111,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.352" Height="23" Password="password"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="144,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="1088" TextChanged="textBox2_TextChanged"/>
         <Button x:Name="button" Content="Exit" HorizontalAlignment="Left" Margin="32,232,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <CheckBox x:Name="checkBox" Content="Launch proxy at startup" HorizontalAlignment="Left" Margin="70,194,0,0" VerticalAlignment="Top" Checked="checkBox_Checked" Unchecked="CheckBox_Unchecked"/>
