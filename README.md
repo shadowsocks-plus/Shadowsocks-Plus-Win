@@ -16,7 +16,7 @@ An installer for SSPlus local proxy on Windows
 ## TO-DO
 - [x] Save config details into a config file and load config info from it
 - [ ] <s>Hide into system tray</s>
-- [ ] Enable system proxy with [Privoxy](https://www.privoxy.org/)
+- [ ] <s>Enable system proxy with [Privoxy](https://www.privoxy.org/)</s>
 - [ ] Convert SOCKS5 to VPN?
 
 ## Acknowledgement & License
