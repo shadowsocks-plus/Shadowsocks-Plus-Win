@@ -21,7 +21,7 @@
 
 ### 安装SwitchyOmega插件
 
-- 在地址栏输入`chrome://extensions/`打开插件管理页面 / [Click me](chrome://extensions/) to open extensions manager
+- 在地址栏输入`chrome://extensions/`打开插件管理页面 / [chrome://extensions/](chrome://extensions/)
 
 - 如图，请勾选开发者模式 / Check `Developer mode`
 
