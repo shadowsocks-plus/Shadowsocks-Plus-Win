@@ -48,6 +48,8 @@
 
 - 如图，请选择SOCKS5代理，远程DNS解析，服务器地址`127.0.0.1` ，端口`1088` (如果你在主程序界面设置的`Local port`是其它值，请把这里的端口和它**保持一致**)
 
+![firefox](https://jm33.me/img/ff-proxy.png)
+
 ## 其它网络应用
 
 > 由于Shadowsocks属于SOCKS5代理，你的系统应该无法直接使用它，请使用*privoxy*
