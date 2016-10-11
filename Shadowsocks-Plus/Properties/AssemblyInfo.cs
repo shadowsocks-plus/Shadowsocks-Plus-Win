@@ -8,7 +8,7 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Shadowsocks-Plus")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A Shadowsocks-Plus wrapper for Windows")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Shadowsocks-Plus")]

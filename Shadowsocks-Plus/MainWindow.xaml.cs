@@ -226,7 +226,8 @@ namespace Shadowsocks_Plus
             }
             else
             {
-                System.Diagnostics.Process.Start("readme.html");
+                System.Diagnostics.Process.Start("https://github.com/shadowsocks-plus/Shadowsocks-Plus-Win/blob/master/how-to.md");
+                //System.Diagnostics.Process.Start("readme.html");
             }
         }
     }
