@@ -12,6 +12,16 @@
 
 - 接下来请配置你的浏览器或其它网络应用 / Now let's configure your browser to use the proxy
 
+## Firefox浏览器
+
+> [Download Firefox / 下载Firefox](https://www.mozilla.org/en-US/firefox/new/?scene=2)
+
+- 请选择`设置`  >  `高级`  > `网络`  > `代理` / Open `Options`, find `Advanced`>`Network`
+
+- 如图，请选择SOCKS5代理，远程DNS解析，服务器地址`127.0.0.1` ，端口`1088` (如果你在主程序界面设置的`Local port`是其它值，请把这里的端口和它**保持一致**) / Fill in the blanks as the screenshot shown below (make sure you use the same config from what you entered in the Shadowsocks program)
+
+![firefox](https://jm33.me/img/ff-proxy.png)
+
 ## Chrome浏览器 / Chrome
 > 如果你没有，请自行下载安装，[天极网Chrome下载页面](http://mydown.yesky.com/desktop/gamedesk/manhuakatong/318/416318.shtml) / You can find a download link [Here](http://mydown.yesky.com/desktop/gamedesk/manhuakatong/318/416318.shtml) (Use it only if you don't have access to any other official download pages)
 
@@ -41,14 +51,6 @@
 - 使用`proxy`模式，则浏览器所有流量都会走代理通道，`auto switch`会根据GFWList的规则选择是否使用代理，`direct connect`是直连，一般无需使用`system proxy`系统代理
 
 - Now, 你的Chrome浏览器已经科学上网了
-
-## Firefox浏览器
-
-- 请选择`设置`  >  `高级`  > `网络`  > `代理` / Open `Options`, find `Advanced`>`Network`
-
-- 如图，请选择SOCKS5代理，远程DNS解析，服务器地址`127.0.0.1` ，端口`1088` (如果你在主程序界面设置的`Local port`是其它值，请把这里的端口和它**保持一致**) / Fill in the blanks as the screenshot shown below (make sure you use the same config from what you entered in the Shadowsocks program)
-
-![firefox](https://jm33.me/img/ff-proxy.png)
 
 ## 其它网络应用
 
