@@ -14,7 +14,7 @@
 
 ## Firefox浏览器
 
-> [Download Firefox / 下载Firefox](https://www.mozilla.org/en-US/firefox/new/?scene=2)
+> [Download Firefox / 下载Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 - 请选择`设置`  >  `高级`  > `网络`  > `代理` / Open `Options`, find `Advanced`>`Network`
 
