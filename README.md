@@ -1,4 +1,4 @@
-# Shadowsocks-Plus-Win
+# Shadowsocks-Plus-Win [Deprecated due to Rewriting of Shadowsocks-Plus]
 An installer for SSPlus local proxy on Windows
 
 ## Disclaimer
@@ -17,7 +17,7 @@ An installer for SSPlus local proxy on Windows
 - [x] Save config details into a config file and load config info from it
 - [ ] <s>Hide into system tray</s>
 - [ ] <s>Enable system proxy with [Privoxy](https://www.privoxy.org/)</s>
-- [ ] Convert SOCKS5 to VPN?
+- [ ] <s>Convert SOCKS5 to VPN?</s>
 
 ## Acknowledgement & License
 - This app uses a compiled [Shadowsocks-Plus](https://github.com/shadowsocks-plus/shadowsocks-plus) client, which is developed by [losfair](https://github.com/losfair)
